@@ -19,16 +19,21 @@ export default function Home() {
                     <a href='/'>Match-A-Wish</a>
                 </div>
                 <div className='links'>
-                    <li><a href='login'>Login</a></li>
-                    <li><a href='register'>Register</a></li>
+                    <li><a href='/login'>Login</a></li>
+                    <li><a href='/register'>Register</a></li>
                 </div>
             </nav>
             <div className='section'>
+                <div>
                 <h1>Match-A-Wish</h1>
-                <h2>Turning anxious waits into joyful memories, one wish at a time.</h2>
-                <div className='buttons'>
-                    <li><button onClick={handleLoginClick}>Login</button></li>
-                    <li><button onClick={handleRegisterClick}>Register</button></li>
+                    <h2>Turning anxious waits into joyful memories, one wish at a time.</h2>
+                    <div className='buttons'>
+                        <li><button onClick={handleLoginClick}>Login</button></li>
+                        <li><button onClick={handleRegisterClick}>Register</button></li>
+                    </div>
+                </div>
+                <div className='img'>
+                    <img src='/images/toys.png' alt='toys'/>
                 </div>
             </div>
         </div>

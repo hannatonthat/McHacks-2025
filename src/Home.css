@@ -20,22 +20,36 @@ nav {
     height: 3.5rem;
 }
 
-.links{
+.links {
     display: flex;
     gap: 1rem;
     list-style: none;
     align-items: center;
-    
 }
 
-.links a, .logo a{
+.links a, .logo a {
     text-decoration: none;
     color: black;
 }
 
 .section {
     margin: 0 10%;
-    padding-top: 25vh;
+    padding-top: 15vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.text-column {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.image-column {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .buttons {
@@ -52,4 +66,9 @@ button {
     border: none;
     padding: 0.75rem;
     border-radius: 50px;
+}
+
+.img img {
+    width: 30rem;
+    height: auto;
 }
