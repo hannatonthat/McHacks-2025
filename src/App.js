@@ -7,6 +7,7 @@ import Admin from './Pages/Admin';
 import Donor from './Pages/Donor';
 import Hospital from './Pages/Hospital';
 import MakeDonation from './Pages/MakeDonation';
+import Inventory from './Pages/Inventory';
 import './App.css';
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
           <Route path="/donor" element={<Donor />} />
           <Route path="/hospital" element={<Hospital />} />
           <Route path="/makedonation" element={<MakeDonation />} />
+          <Route path="/inventory" element={<Inventory />} />
         </Routes>
       </div>
     </Router>
