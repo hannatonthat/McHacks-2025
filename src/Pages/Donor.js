@@ -33,7 +33,7 @@ export default function Donor() {
             </nav>
             <div className='container'>
                 <div className='box one'>
-                    <img src='/images/user.png' alt='toys'></img>
+                    <img src='/images/user2.png' alt='toys'></img>
                 </div>
                 <div className='box two'>
                     <h2>Profile</h2>
@@ -43,21 +43,15 @@ export default function Donor() {
                         <div>
                             <p><strong>Organization Name:</strong></p>
     <p>{profile.org_name}</p>
-    
-    <p><strong>Organization Description:</strong></p>
-    <p>{profile.org_description}</p>
-    
+
+    <p><strong>Location:</strong></p>
+    <p>{profile.location}</p>
+      
     <p><strong>Email:</strong></p>
     <p>{profile.email}</p>
     
     <p><strong>Phone Number:</strong></p>
     <p>{profile.phone}</p>
-    
-    <p><strong>Donated Items:</strong></p>
-    <p>{profile.donated_items?.join(', ')}</p>
-    
-    <p><strong>Location:</strong></p>
-    <p>{profile.location}</p>
                         </div>
                     )}
                     <h2>Functions</h2>
