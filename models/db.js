@@ -2,8 +2,8 @@ const { DBSQLClient } = require('@databricks/sql');
 require('dotenv').config();
 
 const host = DATABRICKS_HOST
-const path = '/sql/1.0/warehouses/edd701b55927742b';
-// const token = process.env.DATABRICKS_TOKEN;
+const path = DATABRICKS_PATH;
+const token = process.env.DATABRICKS_TOKEN;
 
 async function execute(session, statement) {
   const operation = await session.executeStatement(statement, { runAsync: true });
