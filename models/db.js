@@ -3,7 +3,7 @@ require('dotenv').config();
 
 const host = 'dbc-7a8578f6-8fdd.cloud.databricks.com';
 const path = '/sql/1.0/warehouses/edd701b55927742b';
-const token = 'dapia10e6b6f14b312e0cf329f40f48696f9';
+const token = process.env.DATABRICKS_TOKEN;
 
 async function execute(session, statement) {
   const operation = await session.executeStatement(statement, { runAsync: true });
