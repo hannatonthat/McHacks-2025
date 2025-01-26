@@ -59,7 +59,7 @@ export default function Hospital() {
                     <button>
                             <span 
                                 className="button_top" 
-                                onClick={() => window.location.href = '/checkinventory'}
+                                onClick={() => window.location.href = '/inventory'}
                             >
                                 Check Inventory
                             </span>
