@@ -34,6 +34,14 @@ export default function MakeDonation() {
 
   return (
     <div class="background">
+      <nav>
+                <div className='logo'>
+                    <a href='/'>Match-A-Wish</a>
+                </div>
+                <div className='links'>
+                    <a href='/'>Logout</a>
+                </div>
+            </nav>
     <form onSubmit={handleSubmit} className="donation-form">
         <div> 
             <h2 class="center-text">Make a Donation!</h2>

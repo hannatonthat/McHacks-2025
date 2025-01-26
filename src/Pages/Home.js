@@ -13,7 +13,7 @@ export default function Home() {
 
     return (
         <>
-        <div className='background'>
+        <div className='home-background'>
             <nav>
                 <div className='logo'>
                     <a href='/'>Match-A-Wish</a>

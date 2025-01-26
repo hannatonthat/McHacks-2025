@@ -19,3 +19,7 @@ h2 {
 section {
     margin: 0 10%;
 }
+
+.background {
+    overflow-x: hidden;
+}

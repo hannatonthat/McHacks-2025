@@ -45,6 +45,14 @@ export default function RequestDonation({addRequest}) {
 
   return (
     <div class="background">  
+    <nav>
+                <div className='logo'>
+                    <a href='/'>Match-A-Wish</a>
+                </div>
+                <div className='links'>
+                    <a href='/'>Logout</a>
+                </div>
+            </nav>
     <div className="request-donation-container">
       <form className = "request-form"onSubmit={handleSubmit}> 
         <h2 class="center-text">Request a Donation!</h2>
