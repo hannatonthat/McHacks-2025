@@ -2,58 +2,42 @@ import React from 'react'
 import '../MakeDonation.css'
 import { useState } from 'react';
 
-/*export default function MakeDonation() { 
-    const [toyType, setToyType] = useState(''); 
-    const [description, setDescription] = useState('');
-    return (
-
-            /*<div> 
-                <h1>Make a Donation</h1>
-                
-                <button className = "button">Submit</button>
-            </div> 
-
-            
-            <div>
-                <label htmlFor="toyType">Type of Toy:</label>
-                <input
-                type="text"
-                id="toyType"
-                value={toyType}
-                onChange={(e) => setToyType(e.target.value)}
-                placeholder="Enter toy type"
-                />
-            </div>
-            
-
-    )
-}*/
-
 export default function MakeDonation() {
   const [toyType, setToyType] = useState('');
   const [description, setDescription] = useState('');
-  const [category, setCategory] = useState('Puzzle'); // Default category
+  const [category, setCategory] = useState('Select'); // Default category
   const [expirationDate, setExpirationDate] = useState('');
-  const [distributionMethod, setDistributionMethod] = useState('Delivery'); // Default method
+  const [distributionMethod, setDistributionMethod] = useState('No Preference'); // Default method
+  const [image, setImage] = useState(null); 
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
+    const formData = new FormData();
+    formData.append('toyType', toyType);
+    formData.append('description', description);
+    formData.append('category', category);
+    formData.append('expirationDate', expirationDate);
+    formData.append('distributionMethod', distributionMethod);
+    formData.append('image', setImage);
+
     // Handle form submission here
-    console.log({
-      toyType,
-      description,
-      category,
-      expirationDate,
-      distributionMethod,
-    });
+    console.log(formData); 
+    
   };
+  const handleImageChange = (event) => {
+    const selectedFile = event.target.files[0];
+    if (selectedFile) {
+      setImage(selectedFile); 
+    }
+};
 
   return (
+    <div class="background">
     <form onSubmit={handleSubmit} className="donation-form">
         <div> 
-            <h2>Make a Donation!</h2>
-            <p>Help Match-a-Wish's mission by donating a toy today! </p>
+            <h2 class="center-text">Make a Donation!</h2>
+            <p class="center-text">Help a young patient's experience by donating a toy today. </p>
         </div>
       <div>
         <label htmlFor="toyType">Type of Toy:</label>
@@ -78,14 +62,28 @@ export default function MakeDonation() {
       </div>
 
       <div>
+        <label htmlFor="image">Image of Toy:</label>
+        <input 
+          type="file" 
+          id="image" 
+          onChange={handleImageChange} 
+        />
+      </div>
+
+      <div>
         <label htmlFor="category">Category of Donation:</label>
         <select
           id="category"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
         >
-          <option value="Puzzle">Puzzle</option>
-          {/* Add more options as needed */}
+        <option value="Other">Other</option>
+          <option value="Arts and Crafts">Arts and Crafts</option> 
+          <option value="Music">Music</option>
+          <option value="Dolls/Action Figures">Dolls/Action Figures</option>
+          <option value="Books">Books</option>
+          <option value="Games">Games</option>
+          <option value="Sports">Sports</option>
         </select>
       </div>
 
@@ -108,14 +106,15 @@ export default function MakeDonation() {
             value={distributionMethod}
             onChange={(e) => setDistributionMethod(e.target.value)}
           >
+            <option value="No Preference">No Preference</option>
             <option value="Delivery">Delivery</option>
             <option value="Pickup">Pickup</option> 
-            <option value="No Preference">No Preference</option>  
+              
           </select>
         </div>
       </div>
-
       <button type="submit">Submit</button>
     </form>
+    </div>
   );
 }
