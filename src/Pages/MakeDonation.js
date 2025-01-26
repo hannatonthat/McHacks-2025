@@ -118,6 +118,3 @@ export default function MakeDonation() {
     </div>
   );
 }
-    return (
-        <p></p>
-    )
