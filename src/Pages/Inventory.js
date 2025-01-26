@@ -27,13 +27,30 @@ export default function Inventory() {
     };
 
     return (
+        <>
+        <nav>
+                <div className='logo'>
+                    <a href='/'>Match-A-Wish</a>
+                </div>
+                <div className='links'>
+                    <a href='/'>Logout</a>
+                </div>
+            </nav>
         <div className="inventory-container">
             <h1>Inventory</h1>
             <div className="filter-bar">
-                <button onClick={() => handleFilterChange('all')} className={filter === 'all' ? 'active' : ''}>All</button>
-                <button onClick={() => handleFilterChange('arrived')} className={filter === 'arrived' ? 'active' : ''}>Arrived</button>
-                <button onClick={() => handleFilterChange('arriving')} className={filter === 'arriving' ? 'active' : ''}>Arriving</button>
-                <button onClick={() => handleFilterChange('requesting')} className={filter === 'requesting' ? 'active' : ''}>Requesting</button>
+                <button>
+                    <span className="button_top" onClick={() => handleFilterChange('all')}>All</span>
+                </button>
+                <button>
+                    <span className="button_top" onClick={() => handleFilterChange('arrived')}>Arrived</span>
+                </button>
+                <button>
+                    <span className="button_top" onClick={() => handleFilterChange('arriving')}>Arriving</span>
+                </button>
+                <button>
+                    <span className="button_top" onClick={() => handleFilterChange('requesting')}>Requesting</span>
+                </button>
             </div>
             {filteredInventory.length === 0 ? (
                 <p>Loading inventory...</p>
@@ -52,5 +69,6 @@ export default function Inventory() {
                 ))
             )}
         </div>
+        </>
     );
 }

@@ -67,6 +67,10 @@ nav {
     margin-left: 0;
 }
 
+.home p {
+    margin-bottom: 1rem;
+}
+
 .text h2 {
     padding: none;
     margin-bottom: 1.5rem;
