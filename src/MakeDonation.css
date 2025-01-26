@@ -1,6 +1,6 @@
 /* DonationForm.css */
 .background {
-    background-color: #F0F9FE;
+    background-color: #e4f4fb;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -9,7 +9,7 @@
 }
 
 form { 
-    max-width: 500px;
+   max-width: 500px;
     display: grid;
     background-color: #ffffff; 
     margin: auto;  
@@ -19,42 +19,42 @@ form {
     border: 2px solid #e4e4e4;
     border-radius: 5px;
   }
-  .center-text {
+
+.center-text {
     text-align: center;  
     margin-bottom: 10px;
-  }
+}
 
-  label {
+label {
     margin-top: 5px;
     display: block;
     margin-bottom: 5px;
-  }
+}
   
-  input[type="text"],
-  input[type="date"],
-  textarea,
-  select {
+input[type="text"],
+input[type="date"],
+textarea,
+select {
     width: 95%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 3px;
-  }
+}
   
-  textarea {
+textarea {
     resize: vertical;
-  }
+}
   
-  input[type="radio"] {
+input[type="radio"] {
     margin-right: 5px;
-  }
+}
   
-  .button {
-    background-color: #7bd3ea;
+.button {
     border: none; 
     color: white;
     padding: 10px 20px;
     border: none;
     border-radius: 3px;
     cursor: pointer;
-  }
+}

@@ -1,5 +1,6 @@
 .background {
-    background-color: white;
+    background-color: #bbd1de;
+    overflow: hidden;
 }
 
 nav, nav-links {
@@ -23,20 +24,37 @@ nav {
 }
 
 .links a, .logo a {
+    position: relative;
     text-decoration: none;
     color: black;
+    overflow: hidden;
 }
 
-.section {
+.links a::after, .logo a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.3s ease;
+}
+
+.links a:hover::after, .logo a:hover::after {
+    width: 100%;
+}
+
+.home {
+    height: 85%;
     margin: 0 10%;
-    padding-top: 15vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
   
 .img img {
-    width: 30rem;
+    width: 35rem;
     height: auto;
 }
 
@@ -48,3 +66,41 @@ nav {
     text-align: left;
     margin-left: 0;
 }
+
+.text h2 {
+    padding: none;
+    margin-bottom: 1.5rem;
+}
+
+button {
+    margin-top: 2rem;
+    margin-right: 0.5rem;
+    --button_radius: 0.75em;
+    --button_color: white;
+    --button_outline_color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: var(--button_radius);
+    background: var(--button_outline_color);
+  }
+  
+.button_top {
+    display: inline-block;
+    box-sizing: border-box;
+    border: 2px solid var(--button_outline_color);
+    border-radius: var(--button_radius);
+    padding: 0.6em 1em;
+    background: var(--button_color);
+    color: var(--button_outline_color);
+    transform: translateY(-0.2em);
+    transition: transform 0.1s ease;
+  }
+  
+button:hover .button_top {
+    transform: translateY(-0.33em);
+  }
+  
+button:active .button_top {
+    transform: translateY(0);
+  }
+  

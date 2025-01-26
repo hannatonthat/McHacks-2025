@@ -19,21 +19,22 @@ export default function Home() {
                     <a href='/'>Match-A-Wish</a>
                 </div>
                 <div className='links'>
-                    <li><a href='/login'>Login</a></li>
-                    <li><a href='/register'>Register</a></li>
+                    <a href='/login'>Login</a>
+                    <a href='/register'>Register</a>
                 </div>
             </nav>
-            <div className='section'>
-                <div>
+            <div className='home'>
+                <div class='text'>
                     <h1>Match-A-Wish</h1>
                     <h2>Turning anxious waits into joyful memories, one wish at a time.</h2>
-                    <div className='buttons'>
-                        <li><button onClick={handleLoginClick}>Login</button></li>
-                        <li><button onClick={handleRegisterClick}>Register</button></li>
+                    <p>We use AI smart matching to connect toy donors with children’s hospitals, ensuring that every child is entertained during hospital stays.</p>
+                    <div className="buttons">
+                        <button><span class='button_top' onClick={handleLoginClick}>Login</span></button>
+                        <button><span class='button_top' onClick={handleRegisterClick}>Register</span></button>
                     </div>
                 </div>
                 <div className='img'>
-                    <img src='/images/toys.png' alt='toys'/>
+                    <img src='/images/toys1.png' alt='toys'/>
                 </div>
             </div>
         </div>
