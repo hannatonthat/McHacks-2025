@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, {useState, useEffect} from 'react';
 import '../Inventory.css';
 
 export default function Inventory() {
     const [inventory, setInventory] = useState([]);
     const [filteredInventory, setFilteredInventory] = useState([]);
+    const [filter, setFilter] = useState('all');
 
     useEffect(() => {
-        fetch('http://localhost:5000/backend/inventory') // Modify this
+        fetch('http://localhost:5000/backend/inventory') // Modify
             .then((response) => response.json())
             .then((data) => {
                 setInventory(data);
@@ -16,24 +17,24 @@ export default function Inventory() {
     }, []);
 
     const handleFilterChange = (filterValue) => {
+        setFilter(filterValue);
+    
         if (filterValue === 'all') {
             setFilteredInventory(inventory);
         } else {
-            setFilteredInventory(inventory.filter(item => item.status === filterValue));
+            setFilteredInventory(inventory.filter(donation => donation.status === filterValue));
         }
     };
 
     return (
         <div className="inventory-container">
             <h1>Inventory</h1>
-
             <div className="filter-bar">
-                <button onClick={() => handleFilterChange('all')}>All</button>
-                <button onClick={() => handleFilterChange('arrived')}>Arrived</button>
-                <button onClick={() => handleFilterChange('arriving')}>Arriving</button>
-                <button onClick={() => handleFilterChange('requesting')}>Requesting</button>
+                <button onClick={() => handleFilterChange('all')} className={filter === 'all' ? 'active' : ''}>All</button>
+                <button onClick={() => handleFilterChange('arrived')} className={filter === 'arrived' ? 'active' : ''}>Arrived</button>
+                <button onClick={() => handleFilterChange('arriving')} className={filter === 'arriving' ? 'active' : ''}>Arriving</button>
+                <button onClick={() => handleFilterChange('requesting')} className={filter === 'requesting' ? 'active' : ''}>Requesting</button>
             </div>
-
             {filteredInventory.length === 0 ? (
                 <p>Loading inventory...</p>
             ) : (
