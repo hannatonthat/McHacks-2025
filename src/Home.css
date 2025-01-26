@@ -1,7 +1,3 @@
-.background {
-    overflow: hidden;
-}
-
 nav, nav-links {
     display: flex;
 }
