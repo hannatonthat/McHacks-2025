@@ -15,11 +15,7 @@ const {
     getRequestsByHospital
   } = require('../models/db');;
 
-router.get('/', (req, res) => {
-    res.json({
-        message: 'Hello World'
-    });
-});
+  
 
 // DB Routes
 router.get('/create-table', async (req, res) => {
@@ -94,9 +90,9 @@ router.post('/post-hospital', async (req, res) => {
 
 // Donations Routes
 router.post('/post-donation', async (req, res) => {
-    const { item_name, item_description, quantity, hospital_id, donor_id, received, expiry_date, pickup_or_delivery } = req.body;
+    const { item_name, item_description, quantity, donor_id, received, expiry_date, pickup_or_delivery } = req.body;
     try {
-      await createDonation(item_name, item_description, quantity, hospital_id, donor_id, received, expiry_date, pickup_or_delivery);
+      await createDonation(item_name, item_description, quantity, donor_id, received, expiry_date, pickup_or_delivery);
       res.status(200).json({ message: 'Donation created successfully' });
     } catch (error) {
       res.status(500).json({ error: error.message });
