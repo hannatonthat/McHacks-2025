@@ -113,7 +113,7 @@ export default function MakeDonation() {
           </select>
         </div>
       </div>
-      <button type="submit">Submit</button>
+      <button class='make-donation-button' type="submit">Submit</button>
     </form>
     </div>
   );
