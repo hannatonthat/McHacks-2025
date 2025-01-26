@@ -3,6 +3,7 @@ import '../MakeDonation.css'
 import { useState } from 'react';
 
 export default function MakeDonation() {
+<<<<<<< HEAD
   const [toyType, setToyType] = useState('');
   const [description, setDescription] = useState('');
   const [category, setCategory] = useState('Select'); // Default category

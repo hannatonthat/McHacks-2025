@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import Home from './Pages/Home';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
@@ -7,6 +7,9 @@ import Admin from './Pages/Admin';
 import Donor from './Pages/Donor';
 import Hospital from './Pages/Hospital';
 import MakeDonation from './Pages/MakeDonation';
+import RequestDonation from './Pages/RequestDonation';
+import Inventory from './Pages/Inventory';
+import Requests from './Pages/Requests';
 import './App.css';
 
 function App() {
@@ -21,6 +24,9 @@ function App() {
           <Route path="/donor" element={<Donor />} />
           <Route path="/hospital" element={<Hospital />} />
           <Route path="/makedonation" element={<MakeDonation />} />
+          <Route path="/requestdonation" element={<RequestDonation />} />
+          <Route path="/requests" element={<Requests />} />
+          <Route path="/inventory" element={<Inventory />} />
         </Routes>
       </div>
     </Router>

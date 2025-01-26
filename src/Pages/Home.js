@@ -25,7 +25,7 @@ export default function Home() {
             </nav>
             <div className='section'>
                 <div>
-                <h1>Match-A-Wish</h1>
+                    <h1>Match-A-Wish</h1>
                     <h2>Turning anxious waits into joyful memories, one wish at a time.</h2>
                     <div className='buttons'>
                         <li><button onClick={handleLoginClick}>Login</button></li>
