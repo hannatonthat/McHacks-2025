@@ -1,0 +1,41 @@
+.donor-background {
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    margin: 2% 20%;
+    display: flex;
+    gap: 2%;
+    height: auto;
+}
+
+.box {
+    padding: 20px;
+    text-align: left;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+.box.one {
+    flex: 1;
+}
+
+.box.two {
+    flex: 2;
+}
+
+.box.one img {
+    width: 19rem;
+    height: auto;
+    margin: 1rem 0;
+}
+
+button {
+    margin-top: 0.5rem;
+  }
+
+  h2 {
+    margin: 1rem 0;
+  }
