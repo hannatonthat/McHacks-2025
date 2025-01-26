@@ -62,8 +62,8 @@ export default function Donor() {
                     )}
                     <h2>Functions</h2>
                     <div className="buttons">
-                        <button><span class='button_top' onClick={() => window.location.href = '/makedonation'}>Make Donation</span></button>
                         <button><span class='button_top' onClick={() => window.location.href = '/requests'}>View Requests</span></button>
+                        <button><span class='button_top' onClick={() => window.location.href = '/makedonation'}>Make Donation</span></button>
                     </div>
                 </div>
             </div>

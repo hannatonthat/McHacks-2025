@@ -34,6 +34,15 @@ export default function Requests({fulfillRequest}) {
   }
 
   return (
+    <>
+    <nav>
+                <div className='logo'>
+                    <a href='/'>Match-A-Wish</a>
+                </div>
+                <div className='links'>
+                    <a href='/'>Logout</a>
+                </div>
+            </nav>
     <div className="requests-container">
       <h2>Requested Donations</h2>
       {requests.length === 0 ? (
@@ -46,10 +55,11 @@ export default function Requests({fulfillRequest}) {
             <p><strong>Quantity:</strong> {request.quantity}</p>
             <p><strong>Hospital:</strong> {request.hospitalID}</p>
             <p><strong>Status:</strong> {request.status}</p>
-            <button onClick={() => handleFulfillRequest(index)}>Fulfill Request</button>
+            <button class='buttons'><span class='button_top' onClick={() => handleFulfillRequest(index)}>Fulfill Request</span></button>
           </div>
         ))
       )}
     </div>
+    </>
   );
 }
